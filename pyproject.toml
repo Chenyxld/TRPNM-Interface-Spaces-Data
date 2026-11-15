@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trpnm-interface-spaces"
+version = "0.1.0"
+description = "Python data and finite-element code for interface-space comparisons in a 16-pore TR-PNM domain"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "scikit-fem>=12,<13"]
+
+[project.optional-dependencies]
+mesh = ["gmsh>=4.13,<5"]
+figures = ["matplotlib>=3.9,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
